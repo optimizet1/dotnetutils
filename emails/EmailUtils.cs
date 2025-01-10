@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Azure.Communication.Email;
-using Azure.Communication.Email.Models;
 
 public class EmailUtils
 {
@@ -66,21 +65,21 @@ public class EmailUtils
 
         var client = new EmailClient(ConnectionString);
 
-        var emailMessage = new EmailMessage(from, to)
+        var recipients = new EmailRecipients(new List<EmailAddress> { new EmailAddress(to) });
+
+        var emailContent = new EmailContent(subject)
         {
-            Subject = subject,
-            Content = new EmailContent(emailBody)
-            {
-                Html = emailBody
-            }
+            Html = emailBody
         };
+
+        var emailMessage = new EmailMessage(from, recipients, emailContent);
 
         try
         {
-            var response = await client.SendAsync(emailMessage);
-            if (response.Status != EmailSendStatus.Succeeded)
+            var response = await client.SendAsync(WaitUntil.Completed, emailMessage);
+            if (response == null || response.Value == null || response.Value.Status != EmailSendStatus.Succeeded)
             {
-                throw new Exception($"Failed to send email. Status: {response.Status}");
+                throw new Exception("Failed to send email.");
             }
         }
         catch (Exception ex)
