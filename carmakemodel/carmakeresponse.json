@@ -1,0 +1,26 @@
+[
+    {
+        "MakeId": 1,
+        "MakeName": "Toyota",
+        "Models": [
+            { "ModelId": 1, "ModelName": "Corolla" },
+            { "ModelId": 2, "ModelName": "Camry" }
+        ]
+    },
+    {
+        "MakeId": 2,
+        "MakeName": "Ford",
+        "Models": [
+            { "ModelId": 3, "ModelName": "Focus" },
+            { "ModelId": 4, "ModelName": "Mustang" }
+        ]
+    },
+    {
+        "MakeId": 3,
+        "MakeName": "Tesla",
+        "Models": [
+            { "ModelId": 5, "ModelName": "Model S" },
+            { "ModelId": 6, "ModelName": "Model 3" }
+        ]
+    }
+]
