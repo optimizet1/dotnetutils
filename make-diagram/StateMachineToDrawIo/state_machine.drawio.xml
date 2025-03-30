@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="StateMachine">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bed9c1f0a4c643e4940c4b8be858e05b" parent="1" value="Draft" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="80" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eff28844069044e3989f19cc07b962c9" parent="1" value="Submitted" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="260" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="898b741a11f043e893c0c8a0adecd72f" parent="1" value="Processing" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="440" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1a7ab21500347a4bdc739e1f37eac4d" parent="1" value="Validation" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="620" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f78f59f7a2dc417ba4a132783cdd7d8c" parent="1" value="Review" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="800" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="79cc63cb83334877beaab8d34b66e7f8" parent="1" value="Completed" vertex="1" style="ellipse;fillColor=#dae8fc;">
+          <mxGeometry x="1000" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="050ed24de05547a594a3832dcfd2f1b8" value="Submit" edge="1" style="endArrow=block;" parent="1" source="bed9c1f0a4c643e4940c4b8be858e05b" target="eff28844069044e3989f19cc07b962c9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e450f665bd30480e8bc6f9b5e9b802f0" value="Auto" edge="1" style="endArrow=block;" parent="1" source="eff28844069044e3989f19cc07b962c9" target="898b741a11f043e893c0c8a0adecd72f">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7d2cddbefe1c4d7cb738f948c6589bda" value="Parse" edge="1" style="endArrow=block;" parent="1" source="898b741a11f043e893c0c8a0adecd72f" target="e1a7ab21500347a4bdc739e1f37eac4d">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="05b48a38150943d583dda98950e72cdb" value="Fail" edge="1" style="endArrow=block;" parent="1" source="e1a7ab21500347a4bdc739e1f37eac4d" target="f78f59f7a2dc417ba4a132783cdd7d8c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8df83058c04546f088a3e02a68447b17" value="Resolve" edge="1" style="endArrow=block;" parent="1" source="f78f59f7a2dc417ba4a132783cdd7d8c" target="79cc63cb83334877beaab8d34b66e7f8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
